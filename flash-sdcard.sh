@@ -18,7 +18,7 @@ usage () {
    echo    "Options:"
    echo    "    -d device"
    echo    "    -m machine [$(find $SCRIPT_DIR/meta-opi/conf/machine/ -name *.conf -type f -printf "%f\n" | cut -f 1 -d '.' | xargs echo)]"
-   echo    "    -i image name [$(find $SCRIPT_DIR/meta-opi/recipes-core/images/ -name *.bb -type f -printf "%f\n" | cut -f 1 -d '.' | xargs echo)]"
+   echo    "    -i image name [$(find $SCRIPT_DIR/meta-opi/recipes-core/images/ -name *.bb -type f -printf "%f\n" | cut -f 1 -d '.' | xargs echo) $(find $SCRIPT_DIR/meta-sb/recipes-core/images/ -name *.bb -type f -printf "%f\n" | cut -f 1 -d '.' | xargs echo)]"
    echo    ""
    echo    "Others:"
    echo    "    -h = This help menu"
