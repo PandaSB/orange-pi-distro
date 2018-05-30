@@ -1,0 +1,2 @@
+KERNEL=="event*", ATTRS{idVendor}=="5149", ATTRS{idProduct}=="13d3",\
+    TAG+="systemd", ENV{SYSTEMD_WANTS}="mjpg-streamer.service"
