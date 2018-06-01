@@ -4,7 +4,7 @@ Requires=dev-video0.device
 BindsTo=dev-video0.device
 
 [Service]
-Type=forking
+Type=simple
 Enviroment=statedir=/usr/bin
 ExecStart=/usr/bin/mjpg_streamer -i "input_uvc.so -r 1280x720 -d /dev/video0 -f 30 -q 80" -o "output_http.so -p 8080 -w /usr/share/mjpg-streamer/www"
 

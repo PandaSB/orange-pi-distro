@@ -6,14 +6,14 @@ SRC_URI += " \
 "
 
 FILES_${PN} += " \
-    ${sysconfdir}/systemd/network/mjpg-streamer.service \
+    ${sysconfdir}/systemd/system/mjpg-streamer.service \
     ${sysconfdir}/udev/rules.d/mjpg-streamer.rules \
 "
 
 do_install_append() {
-        install -d ${D}${sysconfdir}/systemd/network/
+        install -d ${D}${sysconfdir}/systemd/system/
         install -d ${D}${sysconfdir}/udev/rules.d/
 
-	install -m 0755 ${WORKDIR}/mjpg-streamer.service ${D}${sysconfdir}/systemd/network
+	install -m 0755 ${WORKDIR}/mjpg-streamer.service ${D}${sysconfdir}/systemd/system
 	install -m 0755 ${WORKDIR}/mjpg-streamer.rules   ${D}${sysconfdir}/udev/rules.d
 }
