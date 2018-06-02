@@ -1,0 +1,35 @@
+diff --git a/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts b/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
+index 919eae1e6dfd..fe1695241300 100644
+--- a/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
++++ b/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
+@@ -107,6 +107,15 @@
+ 	status = "okay";
+ };
+ 
++&ehci2 {
++	status = "okay";
++};
++
++&ehci3 {
++	status = "okay";
++};
++
++
+ &emac {
+ 	phy-handle = <&int_mii_phy>;
+ 	phy-mode = "mii";
+@@ -177,6 +186,14 @@
+ 	status = "okay";
+ };
+ 
++&ohci2 {
++	status = "okay";
++};
++
++&ohci3 {
++	status = "okay";
++};
++
+ &spi0 {
+ 	status = "okay";
+ 
